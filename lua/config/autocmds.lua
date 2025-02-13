@@ -15,13 +15,12 @@ local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
 -- })
 
 -- Remove whitespace on save
--- autocmd({
---   "BufWritePre",
---   "BufEnter",
--- }, {
---   pattern = "",
---   command = ":%s/\\s\\+$//e",
--- })
+autocmd({
+  "BufWritePre",
+}, {
+  pattern = "",
+  command = ":%s/\\s\\+$//e",
+})
 
 -- Adding my custom colours
 autocmd("Vimenter", {
@@ -46,10 +45,10 @@ autocmd("BufReadPost", { command = "normal! g'\"" })
 -- autocmd("TermOpen", { command = "setlocal listchars= nonumber norelativenumber" })
 
 -- Turn off relative numbers to oil buffers
--- autocmd("FileType", {
---   pattern = "oil",
---   callback = function()
---     vim.wo.number = false
---     vim.wo.relativenumber = false
---   end,
--- })
+autocmd("FileType", {
+  pattern = "oil",
+  callback = function()
+    vim.wo.number = false
+    vim.wo.relativenumber = false
+  end,
+})

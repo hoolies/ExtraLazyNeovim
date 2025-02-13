@@ -43,7 +43,7 @@ map("n", "<leader>U", ":UndotreeToggle<CR>", { desc = "Opens UndoTree" })
 map("n", "<Esc>", "<cmd>nohl<cr>", { desc = "Escape and Clear hlsearch" })
 
 -- Oil
--- map("n", "<leader>e", ":Oil --float<CR>", { desc = "Opens Oil in floating mode" })
+map("n", "<leader>0", ":Oil --float<CR>", { desc = "Opens Oil in floating mode" })
 
 -- Replace the world under the cursor
 map("n", "<Leader>/", [[:%s/<C-r><C-w>//g<Left><Left>]])
